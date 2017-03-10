@@ -11,7 +11,7 @@
     "name": "Charlie Dowler",
     "url": "https://github.com/charliedowler"
   },
-  "repository": "aikar/gulp-flowtype",
+  "repository": "benmerckx/gulp-flowtype",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:flow",
     "lint:js": "jshint **.js",

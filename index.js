@@ -163,7 +163,7 @@ function killServers() {
     childProcess.execFile(getFlowBin(), ['stop'], {
       cwd: _path
     }, deferred.resolve);
-    return deferred;
+    return deferred.promise;
   });
   return Q.all(defers);
 }
@@ -225,3 +225,5 @@ module.exports = function (options={}) {
     }
   });
 };
+
+module.exports.killServers = killServers
