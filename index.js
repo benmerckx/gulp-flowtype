@@ -61,11 +61,10 @@ function executeFlow(_path, options) {
   var deferred = Q.defer();
 
   var opts = optsToArgs(options);
+  
+  servers.push(path.dirname(_path));
 
-  var command = opts.length || options.killFlow ? (() => {
-    servers.push(path.dirname(_path));
-    return 'check';
-  })() : 'status';
+  var command = opts.length || options.killFlow ? 'check' : 'status';
 
   var args = [
     command,
